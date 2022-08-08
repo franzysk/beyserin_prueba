@@ -1,0 +1,27 @@
+spring:
+  application:
+    name: mvc-clientes
+  datasource:
+    url: jdbc:mysql://localhost:3306/beyserin?reconnect=true&serverTimezone=UTC
+    username: dev
+    password: YWU7gcr*zmh6wgd!ujt
+    driver-class-name: com.mysql.cj.jdbc.Driver
+
+    hikari:
+      connection-timeout: 30000
+      idle-timeout: 300000
+      max-lifetime: 1800000
+  jpa:
+    properties:
+      hibernate:
+        jdbc:
+          time_zone: America/Mexico_City
+        dialect: org.hibernate.dialect.MySQL5Dialect
+    hibernate:
+      ddl-auto: update
+    sql:
+      init:
+        platform: mysql
+server:
+  port: 8090
+  address: 127.0.0.1
